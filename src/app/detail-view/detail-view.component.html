@@ -1,0 +1,13 @@
+<div class="col-md-6" *ngIf ="employee">
+    <div class="card card-primary">
+            <div class="card-body">
+                <app-employee-details [Employee]="employee"></app-employee-details>
+            </div>
+    </div>
+    <div class="col-md-6" *ngIf ="employee">
+        <button type="button" class="btn btn-info btn-sm mr-2" [routerLink]="[ '/edit-employee',employee.id]">EDIT</button>
+        | 
+        <button type="button" class="btn btn-danger btn-sm mr-2" (click)="removeEmployee(employee)">DELETE</button>
+    </div>
+</div>
+

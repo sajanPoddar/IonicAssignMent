@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-1">
+        <form *ngIf="employeeForm" #employeeform="ngForm">
+            <h2>Add New Employee</h2>
+            <p>name: <input class="form-control" type="text"  required name="name" [(ngModel)]="newEmployee.name" /></p>
+            <p>email: <input class="form-control" type="email" #email="ngModel"
+                [class.is-invalid]="email.invalid && email.touched" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" [(ngModel)]="newEmployee.email" /></p>
+            <p>designation: <input class="form-control" type="text" name="designation" [(ngModel)]="newEmployee.designation" /></p>
+            <p>address: <input class="form-control" type="text" name="address" [(ngModel)]="newEmployee.address" /></p>
+            <p>birth_date: <input class="form-control" type="date" required name="birth_date" [(ngModel)]="newEmployee.birth_date" /></p>
+            <p>
+              <button type="button" class="btn btn-primary mr-2"  [disabled]="employeeform.invalid"  (click)="saveemployee(newEmployee)">Submit</button>
+            </p>
+          </form>
+        
+          <form *ngIf="editEmployeeForm && editedemployee" >
+            <h2>Edit Employee</h2>
+            <p>name: <input class="form-control" type="text" name="name" [(ngModel)]="editedemployee.name" /></p>
+            <p>email: <input class="form-control"  type="email" name="email" [(ngModel)]="editedemployee.email" /></p>
+            <p>designation: <input class="form-control" type="text" name="designation" [(ngModel)]="editedemployee.designation" /></p>
+            <p>address: <input class="form-control" type="text" name="address" [(ngModel)]="editedemployee.address" /></p>
+            <p>birth_date: <input class="form-control" type="date" name="birth_date" [(ngModel)]="editedemployee.birth_date" /></p>
+            <p>
+              <button type="button" class="btn btn-primary mr-2" (click)="updateemployee()">Submit</button>
+            </p>
+           
+          </form>
+    </div>
+</div>

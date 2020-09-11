@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "IonicNew"
+    }
+  },
+  "defaultProject": "IonicNew",
+  "cli": {
+    "analytics": false
+  }
 }

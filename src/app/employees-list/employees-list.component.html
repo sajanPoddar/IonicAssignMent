@@ -1,0 +1,14 @@
+
+  <div class="row">
+      <div class="col-md-12">
+          <div class="col-md-4" *ngFor="let employee of employees">
+              <div class="card">                  
+                <app-employee-details [Employee]="employee"></app-employee-details>
+                <button type="button" class="btn btn-info btn-sm mr-2" [routerLink]="[ '/detailView',employee.id]">View</button>
+              </div>
+          </div>
+      </div>
+
+  </div>
+
+  
