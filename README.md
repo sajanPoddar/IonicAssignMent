@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Perform the clone-to-launch steps with these terminal commands.
 
- # git clone https://github.com/sajanPoddar/IonicAssignMent.git
+ ###### git clone https://github.com/sajanPoddar/IonicAssignMent.git
  Then to go this folder, run `cd IonicAssignMent`
  Then run `npm install` to install required packages.
  Then to serve run `npm start`.
